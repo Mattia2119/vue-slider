@@ -24,7 +24,11 @@
             <div class="prev" @click="previous"></div>
             <div class="next" @click="next"></div>
         
-            <div class="thumb" :class="indice == active?'active':''" v-for="item in items">
+            <div class="thumb" 
+                :class="indice == active?'active':''" v-for="item in items"
+                v-for="(slide,index)in items"
+                @click="gotoSlide(index)"
+            >
                 <img :src="item.url" alt="">
             </div> 
             

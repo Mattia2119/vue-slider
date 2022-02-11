@@ -49,6 +49,10 @@ const app = new Vue ({
             }
         }
 
+    },
+
+    gotoSlide(index) {
+      this.activeSlide = index;
     }
     
 });
