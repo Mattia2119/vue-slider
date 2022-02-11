@@ -37,10 +37,16 @@ const app = new Vue ({
 
         previous() {
             this.active--;
+            if (this.active < 0) {
+                this.active = this.items.lenght -1;
+            }
         },
 
         next() {
             this.active++;
+            if (this.active == this.items.lenght) {
+                this.active = 0;                
+            }
         }
 
     }

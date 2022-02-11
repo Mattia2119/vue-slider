@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,13 +20,15 @@
             </div> 
         </div>
         <div class="thumbs">
-            <!-- 
-            <div class="thumb active">
-                <img src="./img/01.jpg" alt="">
-            </div> 
-            -->
+        
             <div class="prev" @click="previous"></div>
             <div class="next" @click="next"></div>
+        
+            <div class="thumb" :class="indice == active?'active':''" v-for="item in items">
+                <img :src="item.url" alt="">
+            </div> 
+            
+          
         </div>
    </div>
 
